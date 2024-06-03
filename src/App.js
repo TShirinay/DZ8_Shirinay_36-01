@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import UserPage from "./Pages/userPage/UserPage";
+import {ModalProvider} from "./context/ModalContext";
+import MainPage from "./Pages/mainPage/MainPage";
+import AboutPage from "./Pages/aboutPage/AboutPage";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <ModalProvider>
+                <MainPage/>
+                <AboutPage/>
+            </ModalProvider>
+            <h2>======================</h2>
+            <UserPage/>
+        </div>
+    );
 }
 
 export default App;
